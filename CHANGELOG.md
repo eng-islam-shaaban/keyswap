@@ -4,6 +4,16 @@ All notable changes to the Keyswap extension are documented in this file.
 
 ---
 
+## [1.7.0] - 2026-05-07
+
+### Fixed
+- **`آ` (Alef with Madda) not converting on Mac layout**: Shift+H on Mac Arabic produces `آ` (Alef with Madda, U+0622), but the mapping incorrectly had `['H', 'أ']` (Alef with Hamza Above, U+0623). This caused `آثممخ` to convert to `آello` instead of `Hello`. Fix: changed Mac mapping to `['H', 'آ']`. The `أ` character is correctly mapped via `['B', 'أ']` (Shift+B).
+
+### Files modified
+- `src/mapping/charMap.ts` — Fixed Mac layout line: `['H', 'أ']` → `['H', 'آ']`
+
+---
+
 ## [1.6.0] - 2026-05-07
 
 ### Added

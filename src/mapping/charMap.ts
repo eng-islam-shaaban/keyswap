@@ -70,7 +70,7 @@ const MAC_LAYOUT_PAIRS: [string, string][] = [
 
   // ASDF row shifted
   ['A', '«'], ['S', '»'], ['D', 'ى'], ['G', 'لأ'],
-  ['H', 'أ'],
+  ['H', 'آ'],
 
   // ZXCV row
   ['z', 'ظ'], ['x', 'ط'], ['c', 'ذ'], ['v', 'د'], ['b', 'ز'],
