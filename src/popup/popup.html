@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./popup.css">
+  <title>Keyswap</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Keyswap</h1>
+    <p class="subtitle">Arabic / English</p>
+
+    <div class="setting">
+      <label>
+        <span>Enabled</span>
+        <input type="checkbox" id="enabled" checked>
+      </label>
+    </div>
+
+    <div class="setting">
+      <label>
+        <span>Show Notifications</span>
+        <input type="checkbox" id="notifications" checked>
+      </label>
+    </div>
+
+    <div class="setting">
+      <label>
+        <span>Show Convert Button</span>
+        <input type="checkbox" id="show-button" checked>
+      </label>
+    </div>
+
+    <div class="setting">
+      <label>
+        <span>Keyboard Layout</span>
+        <select id="layout">
+          <option value="auto">Auto-detect</option>
+          <option value="mac">Mac Arabic</option>
+          <option value="pc">PC Arabic</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="shortcut-info">
+      <span>Shortcut: <kbd id="modifier-key">Alt</kbd> + <kbd>Space</kbd></span>
+      <a href="#" id="customize-shortcut">Customize</a>
+    </div>
+  </div>
+
+  <script type="module" src="./popup.ts"></script>
+</body>
+</html>

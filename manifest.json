@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Keyswap — Arabic/English",
+  "version": "1.0.0",
+  "description": "Fix text typed in the wrong keyboard layout. Converts Arabic and English with a hotkey.",
+  "permissions": ["storage"],
+  "commands": {
+    "convert-text": {
+      "suggested_key": {
+        "default": "Alt+Space"
+      },
+      "description": "Convert selected text or current word"
+    }
+  },
+  "background": {
+    "service_worker": "src/background/background.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/content.ts"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
