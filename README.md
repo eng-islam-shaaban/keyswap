@@ -252,6 +252,7 @@ These always map to themselves in `arToEn`, regardless of any shifted pair confl
 - Shadow DOM elements may not be accessible
 - `Alt+Space` may conflict with OS-level shortcuts on some platforms (customizable via Chrome shortcuts)
 - Cross-origin iframes cannot be accessed (security restriction)
+- **Browser URL bar (omnibox)** is not supported — Chrome does not allow any extension to read or modify omnibox text (hard security restriction)
 
 ## Tech Stack
 
